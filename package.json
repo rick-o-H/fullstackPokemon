@@ -22,11 +22,13 @@
   "dependencies": {
     "axios": "^0.21.1",
     "express": "^4.17.1",
+    "mysql": "^2.18.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
+    "@babel/plugin-transform-runtime": "^7.12.15",
     "@babel/preset-env": "^7.12.16",
     "@babel/preset-react": "^7.12.13",
     "@webpack-cli/init": "^1.1.3",

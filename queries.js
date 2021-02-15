@@ -18,14 +18,14 @@ const retrieveAllPokemon = (callback) => {
   });
 }
 
-const retrieveSinglePokemon = ({ id }, callback) => {
-
-  connection.query('SELECT * FROM pokemon WHERE id = ?', [id], (err, data) => {
+const addPokemon = ({ pokemon }, callback) => {
+  const {id, name, level, type, picture} = pokemon;
+  connection.query(`INSERT INTO pokemon (id, name, level, type, picture) VALUES (?,?,?,?,?)`, [[id], [name], [level], [type], [picture]], (err, data) => {
     if (err) {
       console.log('err')
       callback(err);
     } else {
-      console.log(`data from queries.js file: ${data}`)
+      console.log(`added new pokemon to database! ${data}`)
       callback(null, data);
     }
   });
@@ -33,5 +33,5 @@ const retrieveSinglePokemon = ({ id }, callback) => {
 
 module.exports = {
   retrieveAllPokemon,
-  retrieveSinglePokemon,
+  addPokemon,
 };

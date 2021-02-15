@@ -2,10 +2,9 @@ import React, { Component } from "react";
 
 class Pokemon extends Component {
   constructor(props) {
-    super(porps);
+    super(props);
     this.state = {
       showDetails: false,
-      level: 1,
     }
   }
 
@@ -16,15 +15,13 @@ class Pokemon extends Component {
         {this.props.pokemon.name}
       </td>
       <td>
-        <img src={this.props.pokemon.sprites.front_default} />
+        <img src={this.props.pokemon.picture} />
       </td>
       {this.state.showDetails ?
-      <table>
-        <tr>
-          <td>{`level: ${this.state.level}`}</td>
-          <td>{`type: ${this.props.types[0].type.name}`}</td>
-        </tr>
-      </table> : null}
+      <td>
+        {`level: ${this.props.pokemon.level} \ntype: ${this.props.pokemon.type}`}
+      </td>
+      : null}
     </tr>
     )
   }
