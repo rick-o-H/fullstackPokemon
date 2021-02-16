@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 
+// Fix this file. Not all mistakes are explicitly labeled with FIX_ME
+
 class Pokemon extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       showDetails: false,
     }
@@ -10,12 +12,12 @@ class Pokemon extends Component {
 
   render() {
     return(
-    <tr onClick={() => this.setState({showDetails: !this.state.showDetails})}>
+    <tr onClick={/*  FIX_ME ----> I should control the visibility of details */}>
       <td className="pokemon-name">
-        {this.props.pokemon.name}
+        {/* FIX_ME */}
       </td>
       <td>
-        <img src={this.props.pokemon.picture} />
+        {/* FIX_ME  ----> I should display an image somehow */}
       </td>
       {this.state.showDetails ?
       <td>
@@ -27,4 +29,3 @@ class Pokemon extends Component {
   }
 }
 
-export default Pokemon;

@@ -2,36 +2,18 @@ const mysql = require("mysql");
 const connection = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "yogurtPretzels",
+  password: "", // YOUR MYSQL PASSWORD HERE
   database: "fullstackPokemon",
 });
 
 connection.connect();
 
 const retrieveAllPokemon = (callback) => {
-  connection.query('SELECT * FROM pokemon', (err, data) => {
-    if (err) {
-      callback(err);
-    } else {
-      callback(null, data);
-    }
-  });
+  // FIX_ME
 }
 
-const addPokemon = ({ pokemon }, callback) => {
-  const {id, name, level, type, picture} = pokemon;
-  connection.query(`INSERT INTO pokemon (id, name, level, type, picture) VALUES (?,?,?,?,?)`, [[id], [name], [level], [type], [picture]], (err, data) => {
-    if (err) {
-      console.log('err')
-      callback(err);
-    } else {
-      console.log(`added new pokemon to database! ${data}`)
-      callback(null, data);
-    }
-  });
-}
+// Create an addPokemon method that adds a pokemon to the database.
 
 module.exports = {
   retrieveAllPokemon,
-  addPokemon,
 };

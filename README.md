@@ -23,15 +23,15 @@ cd fullstackPokemon
 ```sh
 npm install
 ```
-5. Seed the database 
+5. Seed the database
 ```sh
 npm run seed
 ```
-6. Bundle and compile the frontend code 
+6. Bundle and compile the frontend code
 ```sh
 npm run build
 ```
-7. Open a new terminal and start the server 
+7. Open a new terminal and start the server
 ```sh
 npm start
 ```
@@ -48,5 +48,5 @@ It is reccomended to complete the requirements in an order similar to the outlin
 | 3     | Finish writing the '/api/pokemon' route. This endpoint should invoke the retrieveAllPokemon function we wrote in step 1. |
 | 4     | Fix the getPokemon method in PokemonList.jsx. This method should make a GET request to the server for all pokemon. |
 | 5     | Create a '/api/addPokemon' endpoint in server.js. This endpoint should should add a new pokemon to the database(you will need to create a function that will query the DB as well). |
-| 6     | Fix the addCaughtPokemon method in PokemonList.jsx. This method should update the pokemonList in state and make a request to the DB to add the new pokemon. You will know if you implemented steps 4, 5, & 6 correctly if when you reload the page, your caught newly pokemon appear in your pokemonList.   |
+| 6     | Fix the addCaughtPokemon method in PokemonList.jsx. This method should update the pokemonList in state and make a request to the DB to add the new pokemon. You will know if you implemented steps 4, 5, & 6 correctly if when you reload the page, your newly caught pokemon appear in your pokemonList.   |
 
