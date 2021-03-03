@@ -2,7 +2,6 @@
 
 >Build react components to catch & display pokemon, write MySQL queries to get and save your caught pokemon, and  connect it all together using an express server in this fullstack workshop.
 
-## Installation
 
 ## Table of Contents
 
